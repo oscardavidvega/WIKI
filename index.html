@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki de Dispositivos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Encabezado -->
+    <header class="bg-gradient-to-r from-green-400 to-blue-900 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-shield-alt text-2xl"></i>
+                    <div class="text-center">
+                        <h1 class="text-2xl font-bold">WIKI DE DISPOSITIVOS</h1>
+                        <p class="text-2xl font-bold">CUN</p>
+                    </div>
+                </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Menú de Acceso Rápido -->
+        <section class="mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <button onclick="mostrarSeccion('preventivo')" class="boton-navegacion bg-green-100 hover:bg-green-200 p-4 rounded-lg text-center transition-colors">
+                    <i class="fas fa-calendar-check text-2xl text-green-600 mb-2"></i>
+                    <div class="font-semibold text-green-800">Mantenimiento Preventivo</div>
+                </button>
+                <button onclick="mostrarSeccion('marcas')" class="boton-navegacion bg-blue-100 hover:bg-blue-200 p-4 rounded-lg text-center transition-colors">
+                    <i class="fas fa-mobile-alt text-2xl text-blue-600 mb-2"></i>
+                    <div class="font-semibold text-blue-800">Guías por Marca</div>
+                </button>
+                <button onclick="mostrarSeccion('herramientas')" class="boton-navegacion bg-purple-100 hover:bg-purple-200 p-4 rounded-lg text-center transition-colors">
+                    <i class="fas fa-toolbox text-2xl text-purple-600 mb-2"></i>
+                    <div class="font-semibold text-purple-800">Herramientas</div>
+                </button>
+            </div>
+        </section>
+
+        <!-- Sección de Mantenimiento Preventivo -->
+        <section id="seccion-preventivo" class="seccion-contenido">
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-calendar-check mr-3 text-green-600"></i>
+                    Rutinas de Mantenimiento Preventivo
+                </h3>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Mantenimiento Diario -->
+                    <div class="border-l-4 border-green-500 bg-green-50 p-4 rounded">
+                        <h4 class="text-xl font-semibold mb-4 text-green-800">Mantenimiento Diario</h4>
+                        <div class="space-y-3">
+                            <div class="elemento-mantenimiento p-3 bg-white rounded border">
+                                <h5 class="font-medium mb-2">Limpieza de Pantalla</h5>
+                                <p class="text-sm text-gray-600 mb-2">Limpieza suave con paño de microfibra</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <i class="fas fa-clock mr-1"></i>
+                                    <span class="mr-4">2-3 min</span>
+                                    <i class="fas fa-exclamation-triangle mr-1"></i>
+                                    <span>No usar productos químicos agresivos</span>
+                                </div>
+                            </div>
+                            
+                            <div class="elemento-mantenimiento p-3 bg-white rounded border">
+                                <h5 class="font-medium mb-2">Verificación de Temperatura</h5>
+                                <p class="text-sm text-gray-600 mb-2">Monitoreo de sobrecalentamiento durante uso intensivo</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <i class="fas fa-thermometer-half mr-1"></i>
+                                    <span>Temperatura óptima: 20-35°C</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mantenimiento Semanal -->
+                    <div class="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+                        <h4 class="text-xl font-semibold mb-4 text-blue-800">Mantenimiento Semanal</h4>
+                        <div class="space-y-3">
+                            <div class="elemento-mantenimiento p-3 bg-white rounded border">
+                                <h5 class="font-medium mb-2">Optimización de Batería</h5>
+                                <p class="text-sm text-gray-600 mb-2">Ciclo completo de carga y descarga controlada</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <i class="fas fa-battery-three-quarters mr-1"></i>
+                                    <span>Mantener entre 20-80% de carga</span>
+                                </div>
+                            </div>
+                            
+                            <div class="elemento-mantenimiento p-3 bg-white rounded border">
+                                <h5 class="font-medium mb-2">Limpieza de Puertos</h5>
+                                <p class="text-sm text-gray-600 mb-2">Eliminación de polvo y residuos en conectores</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <i class="fas fa-wind mr-1"></i>
+                                    <span>Usar aire comprimido suave</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mantenimiento Mensual -->
+                <div class="mt-6 border-l-4 border-purple-500 bg-purple-50 p-4 rounded">
+                    <h4 class="text-xl font-semibold mb-4 text-purple-800">Mantenimiento Mensual</h4>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="elemento-mantenimiento p-3 bg-white rounded border">
+                            <h5 class="font-medium mb-2">Actualización de Software</h5>
+                            <p class="text-sm text-gray-600">Instalación de parches de seguridad y optimizaciones</p>
+                        </div>
+                        <div class="elemento-mantenimiento p-3 bg-white rounded border">
+                            <h5 class="font-medium mb-2">Análisis de Almacenamiento</h5>
+                            <p class="text-sm text-gray-600">Limpieza de archivos temporales y cache</p>
+                        </div>
+                        <div class="elemento-mantenimiento p-3 bg-white rounded border">
+                            <h5 class="font-medium mb-2">Calibración de Sensores</h5>
+                            <p class="text-sm text-gray-600">Verificación de acelerómetro y giroscopio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secciones de Marcas -->
+        <section id="seccion-marcas" class="seccion-contenido hidden">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Guías Específicas por Marca</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
+                <button onclick="mostrarMarca('apple')" class="boton-marca bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
+                    <i class="fab fa-apple text-2xl text-gray-600 mb-2"></i>
+                    <div class="font-semibold">Apple</div>
+                </button>
+                <button onclick="mostrarMarca('samsung')" class="boton-marca bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
+                    <i class="fas fa-mobile-alt text-2xl text-gray-600 mb-2"></i>
+                    <div class="font-semibold">Samsung</div>
+                </button>
+                <button onclick="mostrarMarca('huawei')" class="boton-marca bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
+                    <i class="fas fa-mobile-alt text-2xl text-gray-600 mb-2"></i>
+                    <div class="font-semibold">Huawei</div>
+                </button>
+                <button onclick="mostrarMarca('xiaomi')" class="boton-marca bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
+                    <i class="fas fa-mobile-alt text-2xl text-gray-600 mb-2"></i>
+                    <div class="font-semibold">Xiaomi</div>
+                </button>
+            </div>
+
+            <!-- Mantenimiento Preventivo Apple -->
+            <div id="marca-apple" class="contenido-marca hidden">
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fab fa-apple mr-3 text-gray-600"></i>
+                        Apple - Mantenimiento Preventivo Oficial
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="border rounded-lg p-4">
+                            <h4 class="text-xl font-semibold mb-4 text-blue-800">iPhone</h4>
+                            <div class="space-y-3">
+                                <div class="elemento-mantenimiento p-3 bg-gray-50 rounded">
+                                    <p class="font-medium mb-2"><a href="https://support.apple.com/es-mx/guide/iphone/welcome/ios" class="text-blue-600 hover:underline">Soporte de iPhone</a></p>
+                                    <h5 class="font-medium mb-2">Optimización de Batería iOS</h5>
+                                    <p class="text-sm text-gray-600 mb-2">Configuración de carga optimizada y gestión térmica</p>
+                                    <ul class="text-xs text-gray-500 space-y-1">
+                                        <li>• Activar "Carga de batería optimizada"</li>
+                                        <li>• Evitar temperaturas extremas (-20°C a 45°C)</li>
+                                        <li>• Usar cargadores certificados MFi</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="elemento-mantenimiento p-3 bg-gray-50 rounded">
+                                    <h5 class="font-medium mb-2">Mantenimiento de Face ID/Touch ID</h5>
+                                    <p class="text-sm text-gray-600 mb-2">Limpieza y calibración de sensores biométricos</p>
+                                    <ul class="text-xs text-gray-500 space-y-1">
+                                        <li>• Limpiar sensores con paño seco</li>
+                                        <li>• Reconfigurar si hay fallos frecuentes</li>
+                                        <li>• Verificar actualizaciones de seguridad</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mantenimiento Preventivo Samsung -->
+            <div id="marca-samsung" class="contenido-marca hidden">
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-mobile-alt mr-3 text-gray-600"></i>
+                        Samsung - Mantenimiento Preventivo Oficial
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="border rounded-lg p-4">
+                            <h4 class="text-xl font-semibold mb-4 text-blue-800">Galaxy Series</h4>
+                            <div class="space-y-3">
+                                <div class="elemento-mantenimiento p-3 bg-gray-50 rounded">
+                                    <p class="font-medium mb-2"><a href="https://www.samsung.com/co/support/" class="text-blue-600 hover:underline">Soporte de Samsung</a></p>
+                                    <p class="font-medium mb-2"><a href="https://images.samsung.com/is/content/samsung/assets/latin/support/repara-contigo/manuales-de-reparaci%C3%B3n/s22-series/SM-S908B_S22U_RepairGuide_Open_Spa_Rev.1.0_230616.pdf" class="text-blue-600 hover:underline">Manual de reparación S22 Ultra</a></p>
+                                    <h5 class="font-medium mb-2">Samsung Device Care</h5>
+                                    <p class="text-sm text-gray-600 mb-2">Optimización automática del sistema One UI</p>
+                                    <ul class="text-xs text-gray-500 space-y-1">
+                                        <li>• Ejecutar optimización semanal automática</li>
+                                        <li>• Configurar modo de ahorro adaptativo</li>
+                                        <li>• Monitorear aplicaciones en segundo plano</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="elemento-mantenimiento p-3 bg-gray-50 rounded">
+                                    <h5 class="font-medium mb-2">Mantenimiento de S Pen</h5>
+                                    <p class="text-sm text-gray-600 mb-2">Cuidado del stylus en dispositivos Note</p>
+                                    <ul class="text-xs text-gray-500 space-y-1">
+                                        <li>• Limpiar punta regularmente</li>
+                                        <li>• Verificar calibración mensualmente</li>
+                                        <li>• Reemplazar punta cuando sea necesario</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border rounded-lg p-4">
+                            <h4 class="text-xl font-semibold mb-4 text-blue-800">Pantallas AMOLED</h4>
+                            <div class="space-y-3">
+                                <div class="elemento-mantenimiento p-3 bg-gray-50 rounded">
+                                    <h5 class="font-medium mb-2">Prevención de Burn-in</h5>
+                                    <p class="text-sm text-gray-600 mb-2">Cuidado específico para pantallas OLED</p>
+                                    <ul class="text-xs text-gray-500 space-y-1">
+                                        <li>• Usar modo oscuro cuando sea posible</li>
+                                        <li>• Activar ocultación automática de barra de navegación</li>
+                                        <li>• Reducir brillo en uso prolongado</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mantenimiento Preventivo Huawei -->
+            <div id="marca-huawei" class="contenido-marca hidden">
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-mobile-alt mr-3 text-gray-600"></i>
+                        Huawei - Mantenimiento Preventivo Oficial
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="border rounded-lg p-4">
+                            <h4 class="text-xl font-semibold mb-4 text-blue-800">Serie P y Mate</h4>
+                            <div class="space-y-3">
+                                <div class="elemento-mantenimiento p-3 bg-gray-50 rounded">
+                                    <p class="font-medium mb-2"><a href="https://consumer.huawei.com/co/support/" class="text-blue-600 hover:underline">Soporte de Huawei</a></p>
+                                    <p class="font-medium mb-2"><a href="https://consumer.huawei.com/co/support/manual-list/?productId=CMCG10000002" class="text-blue-600 hover:underline">Manual por modelo</a></p>
+                                    <h5 class="font-medium mb-2">Optimización EMUI/HarmonyOS</h5>
+                                    <p class="text-sm text-gray-600 mb-2">Gestor de teléfono y optimización del sistema</p>
+                                    <ul class="text-xs text-gray-500 space-y-1">
+                                        <li>• Usar Optimizador integrado semanalmente</li>
+                                        <li>• Activar limpieza automática de archivos basura</li>
+                                        <li>• Configurar gestión inteligente de energía</li>
+                                        <li>• Monitorear consumo de aplicaciones</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="elemento-mantenimiento p-3 bg-gray-50 rounded">
+                                    <h5 class="font-medium mb-2">Cuidado de Batería SuperCharge</h5>
+                                    <p class="text-sm text-gray-600 mb-2">Gestión de carga rápida y salud de batería</p>
+                                    <ul class="text-xs text-gray-500 space-y-1">
+                                        <li>• Usar solo cargadores originales SuperCharge</li>
+                                        <li>• Activar "Carga inteligente" nocturna</li>
+                                        <li>• Verificar salud de batería mensualmente</li>
+                                        <li>• Evitar carga completa constante (80% ideal)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border rounded-lg p-4">
+                            <h4 class="text-xl font-semibold mb-4 text-blue-800">Cámaras Leica</h4>
+                            <div class="space-y-3">
+                                <div class="elemento-mantenimiento p-3 bg-gray-50 rounded">
+                                    <h5 class="font-medium mb-2">Mantenimiento de Sistema de Cámaras</h5>
+                                    <p class="text-sm text-gray-600 mb-2">Cuidado de lentes y sensores múltiples</p>
+                                    <ul class="text-xs text-gray-500 space-y-1">
+                                        <li>• Limpiar lentes con paño de microfibra seco</li>
+                                        <li>• No usar líquidos directamente sobre lentes</li>
+                                        <li>• Limpiar alrededor de módulo de cámara</li>
+                                        <li>• Verificar enfoque automático mensualmente</li>
+                                    </ul>
+                                </div>
+
+                                <div class="elemento-mantenimiento p-3 bg-gray-50 rounded">
+                                    <h5 class="font-medium mb-2">Actualización de Firmware</h5>
+                                    <p class="text-sm text-gray-600 mb-2">Mantenimiento de AppGallery y HMS</p>
+                                    <ul class="text-xs text-gray-500 space-y-1">
+                                        <li>• Actualizar sistema operativo regularmente</li>
+                                        <li>• Verificar actualizaciones de HMS Core</li>
+                                        <li>• Mantener AppGallery actualizada</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mantenimiento Preventivo Xiaomi -->
+            <div id="marca-xiaomi" class="contenido-marca hidden">
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-mobile-alt mr-3 text-gray-600"></i>
+                        Xiaomi - Mantenimiento Preventivo Oficial
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="border rounded-lg p-4">
+                            <h4 class="text-xl font-semibold mb-4 text-blue-800">Serie Mi, Redmi y POCO</h4>
+                            <div class="space-y-3">
+                                <div class="elemento-mantenimiento p-3 bg-gray-50 rounded">
+                                    <p class="font-medium mb-2"><a href="https://www.mi.com/global/support/" class="text-blue-600 hover:underline">Soporte de Xiaomi</a></p>
+                                    <p class="font-medium mb-2"><a href="https://spare-parts.mi.com/es/pages/manuals" class="text-blue-600 hover:underline">Manuales de reparación</a></p>
+                                    <p class="font-medium mb-2"><a href="https://cdn.shopify.com/s/files/1/0955/8360/0979/files/O3_Xiaomi_15_ERP_manual.pdf?v=1748954667" class="text-blue-600 hover:underline">Manal de reparacion xiaomi 15</a></p>
+                                    <p class="font-medium mb-2"><a href="https://cdn.shopify.com/s/files/1/0955/8360/0979/files/O1_Xiaomi_15_Ultra_ERP.pdf?v=1749732817" class="text-blue-600 hover:underline">Manal de reparacion xiaomi 15 Ultra</a></p>
+                                    <p class="font-medium mb-2"><a href="https://cdn.shopify.com/s/files/1/0955/8360/0979/files/O11U_POCO_F7_Ultra_ERP.pdf?v=1750042191" class="text-blue-600 hover:underline">Manal de reparacion Poco f7 Ultra</a></p>
+                                    <p class="font-medium mb-2"><a href="https://cdn.shopify.com/s/files/1/0955/8360/0979/files/O16U_Redmi_Note_14_Pro_5G_ERP_manual.pdf?v=1748444961" class="text-blue-600 hover:underline">Manal de reparacion Redmi Note 14 Pro+ 5G</a></p>
+                                    <h5 class="font-medium mb-2">Optimización MIUI/HyperOS</h5>
+                                    <p class="text-sm text-gray-600 mb-2">Limpiador de seguridad y gestión del sistema</p>
+                                    <ul class="text-xs text-gray-500 space-y-1">
+                                        <li>• Usar "Seguridad" para limpieza semanal</li>
+                                        <li>• Activar limpieza automática de caché</li>
+                                        <li>• Configurar permisos de aplicaciones</li>
+                                        <li>• Analizar virus y amenazas regularmente</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="elemento-mantenimiento p-3 bg-gray-50 rounded">
+                                    <h5 class="font-medium mb-2">Gestión de Batería</h5>
+                                    <p class="text-sm text-gray-600 mb-2">Optimización de carga rápida y ahorro de energía</p>
+                                    <ul class="text-xs text-gray-500 space-y-1">
+                                        <li>• Usar cargadores originales certificados</li>
+                                        <li>• Activar "Ahorro de batería" automático</li>
+                                        <li>• Configurar restricción de apps en segundo plano</li>
+                                        <li>• Verificar consumo por aplicación semanalmente</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border rounded-lg p-4">
+                            <h4 class="text-xl font-semibold mb-4 text-blue-800">Pantallas AMOLED/LCD</h4>
+                            <div class="space-y-3">
+                                <div class="elemento-mantenimiento p-3 bg-gray-50 rounded">
+                                    <h5 class="font-medium mb-2">Protección de Pantalla</h5>
+                                    <p class="text-sm text-gray-600 mb-2">Cuidado de pantallas de alta frecuencia de refresco</p>
+                                    <ul class="text-xs text-gray-500 space-y-1">
+                                        <li>• Ajustar brillo automático para evitar desgaste</li>
+                                        <li>• Usar protector de pantalla de calidad</li>
+                                        <li>• Activar modo lectura para reducir fatiga</li>
+                                        <li>• En AMOLED: usar modo oscuro para alargar vida útil</li>
+                                    </ul>
+                                </div>
+
+                                <div class="elemento-mantenimiento p-3 bg-gray-50 rounded">
+                                    <h5 class="font-medium mb-2">Actualizaciones del Sistema</h5>
+                                    <p class="text-sm text-gray-600 mb-2">Mantenimiento de MIUI/HyperOS actualizado</p>
+                                    <ul class="text-xs text-gray-500 space-y-1">
+                                        <li>• Verificar actualizaciones del sistema mensualmente</li>
+                                        <li>• Instalar parches de seguridad</li>
+                                        <li>• Actualizar aplicaciones del sistema</li>
+                                        <li>• Hacer respaldo antes de actualizaciones mayores</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Herramientas -->
+        <section id="seccion-herramientas" class="seccion-contenido hidden">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-toolbox mr-3 text-purple-600"></i>
+                    Herramientas para Mantenimiento Preventivo
+                </h3>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center p-4 border rounded-lg">
+                        <i class="fas fa-tint text-3xl text-blue-600 mb-3"></i>
+                        <h4 class="font-semibold mb-2">Kit de Limpieza</h4>
+                        <p class="text-sm text-gray-600">Paños de microfibra, alcohol isopropílico, bastoncillos</p>
+                    </div>
+                    
+                    <div class="text-center p-4 border rounded-lg">
+                        <i class="fas fa-thermometer-half text-3xl text-red-600 mb-3"></i>
+                        <h4 class="font-semibold mb-2">Monitor de Temperatura</h4>
+                        <p class="text-sm text-gray-600">Apps para monitoreo térmico y gestión de rendimiento</p>
+                    </div>
+                    
+                    <div class="text-center p-4 border rounded-lg">
+                        <i class="fas fa-battery-three-quarters text-3xl text-green-600 mb-3"></i>
+                        <h4 class="font-semibold mb-2">Analizador de Batería</h4>
+                        <p class="text-sm text-gray-600">Herramientas de diagnóstico de salud de batería</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Función para mostrar secciones principales
+        function mostrarSeccion(seccion) {
+            // Ocultar todas las secciones de contenido
+            const secciones = document.querySelectorAll('.seccion-contenido');
+            secciones.forEach(s => s.classList.add('hidden'));
+            
+            // Mostrar la sección seleccionada
+            const seccionObjetivo = document.getElementById('seccion-' + seccion);
+            if (seccionObjetivo) {
+                seccionObjetivo.classList.remove('hidden');
+            }
+            
+            // Actualizar botón activo
+            document.querySelectorAll('.boton-navegacion').forEach(boton => {
+                boton.classList.remove('ring-2', 'ring-blue-500');
+            });
+            event.target.closest('.boton-navegacion').classList.add('ring-2', 'ring-blue-500');
+        }
+
+        // Función para mostrar marcas específicas
+        function mostrarMarca(marca) {
+            // Ocultar todo el contenido de marcas
+            const contenidoMarcas = document.querySelectorAll('.contenido-marca');
+            contenidoMarcas.forEach(contenido => contenido.classList.add('hidden'));
+            
+            // Mostrar el contenido de la marca seleccionada
+            const marcaObjetivo = document.getElementById('marca-' + marca);
+            if (marcaObjetivo) {
+                marcaObjetivo.classList.remove('hidden');
+            }
+            
+            // Actualizar botón activo
+            document.querySelectorAll('.boton-marca').forEach(boton => {
+                boton.classList.remove('ring-2', 'ring-blue-500', 'bg-blue-50');
+            });
+            event.target.closest('.boton-marca').classList.add('ring-2', 'ring-blue-500', 'bg-blue-50');
+        }
+
+        // Inicializar con la sección de mantenimiento preventivo visible
+        document.addEventListener('DOMContentLoaded', function() {
+            mostrarSeccion('preventivo');
+        });
+    </script>
+</body>
+</html>
